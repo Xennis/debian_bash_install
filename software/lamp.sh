@@ -24,16 +24,19 @@ function install() {
 function config() {
 	echo ""
 	echo "Config:"
-	echo "          modify ${APACHE_CONF}"
+	echo "    modify ${APACHE_CONF}"
 	if ask ">>>>>>>>>>>>>>>>>>>>> Config it?";
+	then
 		# Add phpmyadmin config location to apache config file
 		echo " " >> ${APACHE_CONF}
 		echo "# Added: phpMyAdmin" >> ${APACHE_CONF}
 		echo "Include ${PHPMYADMIN_CONF}" >> ${APACHE_CONF}
 	    sudo service apache2 restart
 
-	    if ask ">>>>>>>>>>>>>>>>>>>>> Create phpinfo file?"; then
+	    if ask ">>>>>>>>>>>>>>>>>>>>> Create phpinfo file?";
+	    then
 	        echo "<?php echo phpinfo(); ?>" > /var/www/info.php
 	        echo "Create file: /var/www/info.php"
 	    fi
+	fi
 }

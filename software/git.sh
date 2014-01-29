@@ -6,7 +6,7 @@
 function install() {
 	echo ""
 	echo "Install:"
-	echo "          git"
+	echo "    git"
 	if ask ">>>>>>>>>>>>>>>>>>>>> Install it?";
 	then	
 		sudo apt-get install git

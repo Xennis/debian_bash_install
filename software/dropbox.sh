@@ -6,7 +6,7 @@
 function install() {
 	echo ""
 	echo "Install:"
-	echo "          nautilus-dropbox"
+	echo "    nautilus-dropbox"
 	if ask ">>>>>>>>>>>>>>>>>>>>> Install it?";
 	then	
 		sudo apt-get install nautilus-dropbox

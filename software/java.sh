@@ -6,7 +6,7 @@
 function install() {
 	echo ""
 	echo "Install:"
-	echo "          openjdk-7-jdk"
+	echo "    openjdk-7-jdk"
 	if ask ">>>>>>>>>>>>>>>>>>>>> Install it?";
 	then	
 		# Install Java JDK (which includes JRE)
