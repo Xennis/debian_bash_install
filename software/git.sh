@@ -1,6 +1,9 @@
 #!/bin/bash
+# --------------------------- Settings ----------------------------
+
+
 # --------------------------- Functions ----------------------------
-function install_git() {
+function install() {
 	echo ""
 	echo "Install:"
 	echo "          git"
@@ -8,4 +11,8 @@ function install_git() {
 	then	
 		sudo apt-get install git
 	fi
+}
+
+function config() {
+	echo ""
 }

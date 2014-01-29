@@ -3,8 +3,9 @@
 APACHE_CONF=/etc/apache2/apache2.conf
 PHPMYADMIN_CONF=/etc/phpmyadmin/apache.conf
 
+
 # --------------------------- Functions ----------------------------
-function install_lamp() {
+function install() {
 	echo ""
 	echo "Install:"
 	echo "    apache2"
@@ -20,7 +21,7 @@ function install_lamp() {
 	fi
 }
 
-function config_lamp() {
+function config() {
 	echo ""
 	echo "Config:"
 	echo "          modify ${APACHE_CONF}"

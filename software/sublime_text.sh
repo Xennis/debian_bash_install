@@ -1,6 +1,9 @@
 #!/bin/bash
+# --------------------------- Settings ----------------------------
+
+
 # --------------------------- Functions ----------------------------
-function install_sublime_text() {
+function install() {
 	echo ""
 	echo "Install:"
 	echo "          sublime-text-installer (sublime-text-3)"
@@ -11,4 +14,8 @@ function install_sublime_text() {
 		# Install Sublime Text
 		sudo apt-get install sublime-text-installer
 	fi
+}
+
+function config() {
+	echo ""
 }

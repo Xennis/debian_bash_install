@@ -1,6 +1,9 @@
 #!/bin/bash
+# --------------------------- Settings ----------------------------
+
+
 # --------------------------- Functions ----------------------------
-function install_django() {
+function install() {
 	local django_version=1.6.1
 
 	echo ""
@@ -23,4 +26,8 @@ function install_django() {
 		# Install Django
 		sudo pip install Django==${django_version}
 	fi
+}
+
+function config() {
+	echo ""
 }

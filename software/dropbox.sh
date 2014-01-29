@@ -1,6 +1,9 @@
 #!/bin/bash
+# --------------------------- Settings ----------------------------
+
+
 # --------------------------- Functions ----------------------------
-function install_dropbox() {
+function install() {
 	echo ""
 	echo "Install:"
 	echo "          nautilus-dropbox"
@@ -8,4 +11,8 @@ function install_dropbox() {
 	then	
 		sudo apt-get install nautilus-dropbox
 	fi
+}
+
+function config() {
+	echo ""
 }

@@ -1,6 +1,9 @@
 #!/bin/bash
+# --------------------------- Settings ----------------------------
+
+
 # --------------------------- Functions ----------------------------
-function install_java() {
+function install() {
 	echo ""
 	echo "Install:"
 	echo "          openjdk-7-jdk"
@@ -11,4 +14,8 @@ function install_java() {
 		# Install Java JRE only
 		#sudo apt-get install openjdk-7-jre
 	fi
+}
+
+function config() {
+	echo ""
 }

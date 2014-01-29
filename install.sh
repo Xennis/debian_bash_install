@@ -11,6 +11,21 @@ source functions/general_functions.sh
 
 
 # --------------------------- Functions ----------------------------
+function software() {
+    if [ "$#" -lt 1 ]
+    then
+        echo "Usage software SOFTWARE-NAME"
+        echo "Example: software dropbox"
+        echo ""
+        exit 1
+    else
+        local software_name=$1
+    fi
+    
+    source software/${software_name}.sh
+    install ${software_name}
+    config ${software_name}
+}
 
 
 # --------------------------- Menu ----------------------------
@@ -21,34 +36,25 @@ select opt in "${options[@]}"
 do
     case $opt in
         "sublime_text")
-    	    source software/sublime_text.sh
-            install_sublime_text
+            software sublime_text
             ;;
         "git")
-            source software/git.sh
-            install_git
+            software git
             ;;
         "django")
-            source software/django.sh
-            install_django
+            software django
             ;;
         "vsftpd")
-            source software/vsftpd.sh
-            install_vsftpd
-            config_vsftpd
+            software vsftpd
             ;;
         "lamp")
-            source software/lamp.sh
-            install_lamp
-            config_lamp
+            software lamp
             ;;
         "dropbox")
-            source software/dropbox.sh
-            install_dropbox
+            software dropbox
             ;;
         "java")
-            source software/java.sh
-            install_java
+            software java
             ;;
         "exit")
             break

@@ -5,7 +5,7 @@ PAM_VSFTPD_CONF=/etc/pam.d/vsftpd
 
 
 # --------------------------- Functions ----------------------------
-function install_vsftpd() {
+function install() {
 	echo ""
 	echo "Install:"
 	echo "          vsftpd"
@@ -16,7 +16,7 @@ function install_vsftpd() {
 	fi
 }
 
-function config_vsftpd() {
+function config() {
 	local username=user1
 
 	echo ""
