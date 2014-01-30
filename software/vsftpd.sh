@@ -8,8 +8,8 @@ PAM_VSFTPD_CONF=/etc/pam.d/vsftpd
 function install() {
 	echo ""
 	echo "Install:"
-	echo "    vsftpd"
-	echo "    libpam-pwdfile (virtual users)"
+	echo "          vsftpd"
+	echo "          libpam-pwdfile (virtual users)"
 	if ask ">>>>>>>>>>>>>>>>>>>>> Install it?";
 	then	
 		sudo apt-get install vsftpd libpam-pwdfile
@@ -21,10 +21,10 @@ function config() {
 
 	echo ""
 	echo "Config"
-	echo "    modify ${VSFTPD_CONF}"
-	echo "    modify /etc/pam.d/vsftpd"
-	echo "    create virutal user ${username}"
-	echo "    create var/www/${username}/www/"
+	echo "          modify ${VSFTPD_CONF}"
+	echo "          modify /etc/pam.d/vsftpd"
+	echo "          create virutal user ${username}"
+	echo "          create var/www/${username}/www/"
 	if ask ">>>>>>>>>>>>>>>>>>>>> Config it?";
 	then
 		# Configure vsftpd

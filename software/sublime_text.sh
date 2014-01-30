@@ -6,7 +6,7 @@
 function install() {
 	echo ""
 	echo "Install:"
-	echo "    sublime-text-installer (sublime-text-3)"
+	echo "          sublime-text-installer (sublime-text-3)"
 	if ask ">>>>>>>>>>>>>>>>>>>>> Install it?";
 	then	
 		sudo add-apt-repository ppa:webupd8team/sublime-text-3

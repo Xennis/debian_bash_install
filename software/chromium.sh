@@ -6,10 +6,10 @@
 function install() {
 	echo ""
 	echo "Install:"
-	echo "          nautilus-dropbox"
+	echo "    chromium-browser"
 	if ask ">>>>>>>>>>>>>>>>>>>>> Install it?";
 	then	
-		sudo apt-get install nautilus-dropbox
+		sudo apt-get install chromium-browser
 	fi
 }
 
