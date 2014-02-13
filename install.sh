@@ -7,7 +7,7 @@ BASEDIR=`dirname $0`
 
 
 # --------------------------- Include gernal scripts ------------------------
-source functions/general_functions.sh
+source general_functions.sh
 
 
 # --------------------------- Functions ----------------------------
@@ -16,7 +16,7 @@ source functions/general_functions.sh
 # --------------------------- Menu ----------------------------
 echo " "
 PS3='Please enter your choice: '
-SOFTWARE=software/*.sh
+SOFTWARE=*/*.sh
 select software in ${SOFTWARE[@]}
 do
     source ${software}

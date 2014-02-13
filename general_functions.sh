@@ -54,3 +54,25 @@ function check_package_exits() {
 		return 1
 	fi
 }
+
+#
+# Check if directory exits
+#
+function check_dir_exits(){
+    if [ "$#" -lt 1 ]
+    then
+        echo "Usage check_dir_exits DIR"
+        echo "Example: check_dir_exits dir/"
+        echo ""
+        exit 1
+    else
+        local dir=$1
+    fi
+ 
+    if [ -d "${dir}" ]
+    then
+        return 0
+    else
+        return 1
+    fi
+}
