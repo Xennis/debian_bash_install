@@ -15,4 +15,10 @@ function install() {
 
 function config() {
 	echo ""
+	echo "Config"
+	echo "          modify global settings"
+	if ask ">>>>>>>>>>>>>>>>>>>>> Config it?";
+	then
+		git config --global push.default matching
+	fi
 }
