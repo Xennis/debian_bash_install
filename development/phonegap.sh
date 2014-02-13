@@ -14,9 +14,9 @@ function install() {
 	echo "    cordova"
 	if ask ">>>>>>>>>>>>>>>>>>>>> Install it?";
 	then	
-		sudo apt-get install nodejs nodejs-legacy npm ant
-		sudo npm install -g phonegap
-		sudo npm install -g cordova
+		apt-get install nodejs nodejs-legacy npm ant
+		npm install -g phonegap
+		npm install -g cordova
 	fi
 }
 

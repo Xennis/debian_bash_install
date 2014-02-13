@@ -10,16 +10,21 @@ BASEDIR=`dirname $0`
 source general_functions.sh
 
 
-# --------------------------- Functions ----------------------------
-
-
 # --------------------------- Menu ----------------------------
+echo ""
+echo "debian_bash_install"
+echo "    NOTE: run script as root/sudo"
 echo " "
 PS3='Please enter your choice: '
 SOFTWARE=*/*.sh
 select software in ${SOFTWARE[@]}
 do
-    source ${software}
-    install
-    config
+	if check_file_exits "${software}";
+	then
+	    source ${software}
+	    install
+	    config
+	else
+       	exit 1
+	fi
 done

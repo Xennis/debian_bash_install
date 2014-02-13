@@ -9,7 +9,7 @@ function install() {
 	echo "     git"
 	if ask ">>>>>>>>>>>>>>>>>>>>> Install it?";
 	then	
-		sudo apt-get install git
+		apt-get install git
 	fi
 }
 

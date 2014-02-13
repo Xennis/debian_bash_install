@@ -10,9 +10,9 @@ function install() {
 	if ask ">>>>>>>>>>>>>>>>>>>>> Install it?";
 	then	
 		# Install Java JDK (which includes JRE)
-		sudo apt-get install openjdk-7-jdk
+		apt-get install openjdk-7-jdk
 		# Install Java JRE only
-		#sudo apt-get install openjdk-7-jre
+		#apt-get install openjdk-7-jre
 	fi
 }
 

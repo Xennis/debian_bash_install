@@ -9,9 +9,9 @@ function install() {
 	echo "    brackets"
 	if ask ">>>>>>>>>>>>>>>>>>>>> Install it?";
 	then	
-		sudo add-apt-repository ppa:webupd8team/brackets
-		sudo apt-get update
-		sudo apt-get install brackets
+		add-apt-repository ppa:webupd8team/brackets
+		apt-get update
+		apt-get install brackets
 	fi
 }
 

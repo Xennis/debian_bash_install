@@ -34,28 +34,6 @@ function ask {
 }
 
 #
-# Uses dpkg to check if a package exits / is installed.
-#
-function check_package_exits() {
-	if [ "$#" -lt 1 ]
-	then
-		echo "Usage check_package_exits PACKAGE-NAME"
-		echo "Example: check_package_exits vim"
-		echo ""
-		exit 1
-	else
-		local package_name=$1
-	fi
-	
-	if dpkg -l | grep -qw ${package_name};
-	then
-		return 0
-	else
-		return 1
-	fi
-}
-
-#
 # Check if directory exits
 #
 function check_dir_exits(){
@@ -66,10 +44,54 @@ function check_dir_exits(){
         echo ""
         exit 1
     else
-        local dir=$1
+        local dir="$1"
     fi
  
     if [ -d "${dir}" ]
+    then
+        return 0
+    else
+        return 1
+    fi
+}
+
+#
+# Check if file exits
+#
+function check_file_exits(){
+    if [ "$#" -lt 1 ]
+    then
+        echo "Usage check_file_exits FILE"
+        echo "Example: check_dir_exits example.txt"
+        echo ""
+        exit 1
+    else
+        local file="$1"
+    fi
+
+    if [ -f "${file}" ]
+    then
+        return 0
+    else
+        return 1
+    fi
+}
+
+#
+# Uses dpkg to check if a package exits / is installed.
+#
+function check_package_exits() {
+    if [ "$#" -lt 1 ]
+    then
+        echo "Usage check_package_exits PACKAGE-NAME"
+        echo "Example: check_package_exits vim"
+        echo ""
+        exit 1
+    else
+        local package_name=$1
+    fi
+    
+    if dpkg -l | grep -qw ${package_name};
     then
         return 0
     else

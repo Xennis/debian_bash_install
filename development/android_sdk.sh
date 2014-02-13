@@ -14,7 +14,7 @@ function install() {
 	echo "    ${android_sdk_tar}"
 	if ask ">>>>>>>>>>>>>>>>>>>>> Install it?";
 	then	
-		sudo apt-get install openjdk-7-jdk
+		apt-get install openjdk-7-jdk
 
 		# Download and unzip tar, delete tar
 		if ! check_dir_exits ${ANDROID_SKD_INSTALL_DIR};

@@ -9,7 +9,7 @@ function install() {
 	echo "    chromium-browser"
 	if ask ">>>>>>>>>>>>>>>>>>>>> Install it?";
 	then	
-		sudo apt-get install chromium-browser
+		apt-get install chromium-browser
 	fi
 }
 
