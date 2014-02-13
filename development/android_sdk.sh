@@ -2,7 +2,7 @@
 # --------------------------- Settings ----------------------------
 ANDROID_SKD_INSTALL_DIR=~/Downloads
 PATH_FILE=~/.bashrc
-#PATH_FILE=~/test
+
 
 # --------------------------- Functions ----------------------------
 function install() {

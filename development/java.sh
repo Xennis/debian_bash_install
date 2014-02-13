@@ -1,5 +1,6 @@
 #!/bin/bash
 # --------------------------- Settings ----------------------------
+#PATH_FILE=~/.bashrc
 
 
 # --------------------------- Functions ----------------------------
@@ -18,4 +19,17 @@ function install() {
 
 function config() {
 	echo ""
+#	echo "Config"
+#	echo "          modify ${PATH_FILE} (add Java to PATH)"
+#	if ask ">>>>>>>>>>>>>>>>>>>>> Config it?";
+#	then
+#		echo "Backup config file: ${PATH_FILE}.original"
+#		sudo cp ${PATH_FILE} ${PATH_FILE}.original
+#		echo "" >> ${PATH_FILE}
+#		echo "# Add Java to PATH" >> ${PATH_FILE}
+#		echo "export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-i386" >> ${PATH_FILE}
+#		echo "export PATH=\"\${PATH}:\${JAVA_HOME}/bin" >> ${PATH_FILE}
+#		# Reload
+#		source ${PATH_FILE}
+#	fi
 }
