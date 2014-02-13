@@ -6,12 +6,13 @@
 function install() {
 	echo ""
 	echo "Install:"
-	echo "    brackets"
+	echo "    nodejs (Node.js)"
+	echo "    npm (package manager for Node.js)"
+	echo "    phonegap"
 	if ask ">>>>>>>>>>>>>>>>>>>>> Install it?";
 	then	
-		sudo add-apt-repository ppa:webupd8team/brackets
-		sudo apt-get update
-		sudo apt-get install brackets
+		sudo apt-get install nodejs npm
+		sudo npm install -g phonegap
 	fi
 }
 

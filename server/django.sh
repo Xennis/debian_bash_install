@@ -13,7 +13,7 @@ function install() {
 	echo "    python-mysqldb (for MySQL)"
 	echo "    Django ${django_version}"
 	echo "Install if apache2 exits: "
-    echo "    libapache2-mod-wsgi"
+	echo "    libapache2-mod-wsgi"
 	if ask ">>>>>>>>>>>>>>>>>>>>> Install it?";
 	then
 		sudo apt-get install python python-pip python-mysqldb
