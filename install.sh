@@ -1,7 +1,7 @@
 #!/bin/bash
 BASEDIR=`dirname $0`
 
-#sudo apt-get install gcc make
+#sudo apt-get install gcc make vim
 
 # --------------------------- Settings ----------------------------
 

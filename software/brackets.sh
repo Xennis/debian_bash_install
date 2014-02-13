@@ -6,12 +6,12 @@
 function install() {
 	echo ""
 	echo "Install:"
-	echo "          sublime-text-installer (sublime-text-3)"
+	echo "          brackets"
 	if ask ">>>>>>>>>>>>>>>>>>>>> Install it?";
 	then	
-		sudo add-apt-repository ppa:webupd8team/sublime-text-3
+		sudo add-apt-repository ppa:webupd8team/brackets
 		sudo apt-get update
-		sudo apt-get install sublime-text-installer
+		sudo apt-get install brackets
 	fi
 }
 

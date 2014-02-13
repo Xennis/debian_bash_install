@@ -25,6 +25,8 @@ function install() {
 		#pip install MySQL-python
 		# Install Django
 		sudo pip install Django==${django_version}
+		# sudo pip install django-tastypie
+		# sudo pip install django-oauth2-provider
 	fi
 }
 
