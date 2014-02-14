@@ -31,7 +31,7 @@ function install() {
 function config() {
 	echo ""
 	echo "Config"
-	echo "          modify ${PATH_FILE} (add SDK to PATH)"
+	echo "    modify ${PATH_FILE} (add SDK to PATH)"
 	if ask ">>>>>>>>>>>>>>>>>>>>> Config it?";
 	then
 		echo "Backup config file: ${PATH_FILE}.original"

@@ -6,7 +6,7 @@
 function install() {
 	echo ""
 	echo "Install:"
-	echo "     git"
+	echo "    git"
 	if ask ">>>>>>>>>>>>>>>>>>>>> Install it?";
 	then	
 		apt-get install git
@@ -16,7 +16,7 @@ function install() {
 function config() {
 	echo ""
 	echo "Config"
-	echo "          modify global settings"
+	echo "    modify global settings"
 	if ask ">>>>>>>>>>>>>>>>>>>>> Config it?";
 	then
 		git config --global push.default matching

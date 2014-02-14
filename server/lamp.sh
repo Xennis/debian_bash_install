@@ -24,7 +24,7 @@ function install() {
 function config() {
 	echo ""
 	echo "Config:"
-	echo "          modify ${APACHE_CONF}"
+	echo "    modify ${APACHE_CONF}"
 	if ask ">>>>>>>>>>>>>>>>>>>>> Config it?";
 		# Add phpmyadmin config location to apache config file
 		echo " " >> ${APACHE_CONF}
