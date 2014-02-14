@@ -17,7 +17,7 @@ function install() {
 	echo "    phpmyadmin"
 	if ask ">>>>>>>>>>>>>>>>>>>>> Install it?";
 	then
-	    sudo apt-get install apache2 apache2-utils php5 php5-mysql mysql-server mysql-client phpmyadmin
+	    apt-get install apache2 apache2-utils php5 php5-mysql mysql-server mysql-client phpmyadmin
 	fi
 }
 
@@ -30,7 +30,7 @@ function config() {
 		echo " " >> ${APACHE_CONF}
 		echo "# Added: phpMyAdmin" >> ${APACHE_CONF}
 		echo "Include ${PHPMYADMIN_CONF}" >> ${APACHE_CONF}
-	    sudo service apache2 restart
+	    service apache2 restart
 
 	    if ask ">>>>>>>>>>>>>>>>>>>>> Create phpinfo file?"; then
 	        echo "<?php echo phpinfo(); ?>" > /var/www/info.php

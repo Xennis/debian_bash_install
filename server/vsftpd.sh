@@ -12,7 +12,7 @@ function install() {
 	echo "    libpam-pwdfile (virtual users)"
 	if ask ">>>>>>>>>>>>>>>>>>>>> Install it?";
 	then	
-		sudo apt-get install vsftpd libpam-pwdfile
+		apt-get install vsftpd libpam-pwdfile
 	fi
 }
 
@@ -29,18 +29,18 @@ function config() {
 	then
 		# Configure vsftpd
 		echo "Backup config file: ${VSFTPD_CONF}.original"
-		sudo mv ${VSFTPD_CONF} ${VSFTPD_CONF}.original
-		sudo cp config_files/vsftpd.conf ${VSFTPD_CONF}
+		mv ${VSFTPD_CONF} ${VSFTPD_CONF}.original
+		cp config_files/vsftpd.conf ${VSFTPD_CONF}
 		# Register virtual users
-		sudo mkdir /etc/vsftpd
-		sudo htpasswd -cd /etc/vsftpd/ftpd.passwd ${username}
+		mkdir /etc/vsftpd
+		htpasswd -cd /etc/vsftpd/ftpd.passwd ${username}
 		# Configure PAM
 		echo "Backup config file: ${PAM_VSFTPD_CONF}.original"
-		sudo mv ${PAM_VSFTPD_CONF} ${PAM_VSFTPD_CONF}.config
-		sudo cp config_files/vsftpd ${PAM_VSFTPD_CONF}
+		mv ${PAM_VSFTPD_CONF} ${PAM_VSFTPD_CONF}.config
+		cp config_files/vsftpd ${PAM_VSFTPD_CONF}
 		# Create local use
-		sudo useradd --home /home/vsftpd --gid nogroup -m --shell /bin/false vsftpd
-		sudo /etc/init.d/vsftpd restart
+		useradd --home /home/vsftpd --gid nogroup -m --shell /bin/false vsftpd
+		/etc/init.d/vsftpd restart
 		# Create directories
 		mkdir /var/www/${username}
 		chmod -w /var/www/${username}

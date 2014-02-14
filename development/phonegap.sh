@@ -17,6 +17,7 @@ function install() {
 		apt-get install nodejs nodejs-legacy npm ant
 		npm install -g phonegap
 		npm install -g cordova
+		npm install -g phonegap-build-api
 	fi
 }
 

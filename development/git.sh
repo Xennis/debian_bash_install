@@ -19,6 +19,8 @@ function config() {
 	echo "    modify global settings"
 	if ask ">>>>>>>>>>>>>>>>>>>>> Config it?";
 	then
+		#git config --global user.email "EMAIL"
+		#git config --global user.name "USER"
 		git config --global push.default matching
 	fi
 }
