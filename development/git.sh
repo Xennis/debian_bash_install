@@ -9,7 +9,10 @@ function install() {
 	echo "    git"
 	if ask ">>>>>>>>>>>>>>>>>>>>> Install it?";
 	then	
+		# Option 1: git
 		apt-get install git
+		# Option 2: git core only
+		#apt-get install git-core
 	fi
 }
 

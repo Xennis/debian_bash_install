@@ -26,6 +26,7 @@ function config() {
 	echo "Config:"
 	echo "    modify ${APACHE_CONF}"
 	if ask ">>>>>>>>>>>>>>>>>>>>> Config it?";
+	then
 		# Add phpmyadmin config location to apache config file
 		echo " " >> ${APACHE_CONF}
 		echo "# Added: phpMyAdmin" >> ${APACHE_CONF}
@@ -36,4 +37,5 @@ function config() {
 	        echo "<?php echo phpinfo(); ?>" > /var/www/info.php
 	        echo "Create file: /var/www/info.php"
 	    fi
+	fi
 }
