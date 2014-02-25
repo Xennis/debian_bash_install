@@ -17,9 +17,9 @@ function install() {
 
 function config() {
 	local user_name="git";
-	local ssh_pub_key="/tmp/git-admin.pub";
+	local ssh_pub_key=/tmp/git-admin.pub;
 
-	if check_file_exits ${ssh_pub_key};
+	if ! check_file_exits ${ssh_pub_key};
 	then
 		echo "ERROR - file not found: ${ssh_pub_key}"
         exit 1
