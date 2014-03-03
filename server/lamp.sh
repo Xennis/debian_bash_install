@@ -33,7 +33,8 @@ function config() {
 		echo "Include ${PHPMYADMIN_CONF}" >> ${APACHE_CONF}
 	    service apache2 restart
 
-	    if ask ">>>>>>>>>>>>>>>>>>>>> Create phpinfo file?"; then
+	    if ask ">>>>>>>>>>>>>>>>>>>>> Create phpinfo file?";
+	    then
 	        echo "<?php echo phpinfo(); ?>" > /var/www/info.php
 	        echo "Create file: /var/www/info.php"
 	    fi

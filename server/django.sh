@@ -8,12 +8,12 @@ function install() {
 
 	echo ""
 	echo "Install:"
-	echo "    python"
-	echo "    python-pip (for Django installation)"
-	echo "    python-mysqldb (for MySQL)"
+	echo " r  python"
+	echo " r  python-pip (for Django installation)"
+	echo " o  python-mysqldb (for MySQL)"
 	echo "    Django ${django_version}"
 	echo "Install if apache2 exits: "
-	echo "    libapache2-mod-wsgi"
+	echo " r  libapache2-mod-wsgi"
 	if ask ">>>>>>>>>>>>>>>>>>>>> Install it?";
 	then
 		apt-get install python python-pip python-mysqldb
@@ -22,7 +22,6 @@ function install() {
 			install libapache2-mod-wsgi
 			service apache2 restart
 		fi
-		#pip install MySQL-python
 		# Install Django
 		pip install Django==${django_version}
 		# pip install django-tastypie django-oauth2-provider
