@@ -19,6 +19,7 @@ function install() {
 		apt-get install python python-pip python-mysqldb
 		if check_package_exits apache2;
 		then
+			# Install mod_wsgi
 			install libapache2-mod-wsgi
 			service apache2 restart
 		fi
