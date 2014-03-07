@@ -6,5 +6,5 @@ BASH script using APT to install and configure various software
 ### Run
 
 ```shell
-bash install.sh
+sudo bash install.sh
 ```
