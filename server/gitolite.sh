@@ -7,11 +7,11 @@ SSHD_CONF=/etc/ssh/sshd_config
 function install() {
 	echo ""
 	echo "Install:"
-	echo " r  git-core"
+	echo " r  git"
 	echo "    gitolite"
 	if ask ">>>>>>>>>>>>>>>>>>>>> Install it?";
 	then
-	    apt-get install git-core gitolite
+	    apt-get install git gitolite
 	fi
 }
 
